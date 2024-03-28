@@ -12,7 +12,7 @@ function ChangePassword() {
   const changePassword = () => {
     axios
       .put(
-        "http://localhost:4200/auth/changepassword",
+        "https://full-stack-server-production-cdf9.up.railway.app/auth/changepassword",
         { oldPassword: oldPassword, newPassword: newPassword },
         {
           headers: { accessToken: localStorage.getItem("accessToken") },

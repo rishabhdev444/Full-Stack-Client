@@ -12,11 +12,11 @@ function Post() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:4200/posts/byId/${id}`).then((resp) => {
+    axios.get(`https://full-stack-server-production-cdf9.up.railway.app/posts/byId/${id}`).then((resp) => {
       setPostObject(resp.data);
     });
 
-    axios.get(`http://localhost:4200/comments/${id}`).then((resp) => {
+    axios.get(`https://full-stack-server-production-cdf9.up.railway.app/comments/${id}`).then((resp) => {
       setComments(resp.data);
     });
   }, []);
@@ -24,7 +24,7 @@ function Post() {
   const addComment = () => {
     axios
       .post(
-        `http://localhost:4200/comments`,
+        `https://full-stack-server-production-cdf9.up.railway.app/comments`,
         {
           commentBody: newComment,
           PostId: id,
@@ -52,7 +52,7 @@ function Post() {
 
   const deleteComment = (id) => {
     axios
-      .delete(`http://localhost:4200/comments/${id}`, {
+      .delete(`https://full-stack-server-production-cdf9.up.railway.app/comments/${id}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -66,7 +66,7 @@ function Post() {
 
   const deletePost = (id) => {
     axios
-      .delete(`http://localhost:4200/posts/${id}`, {
+      .delete(`https://full-stack-server-production-cdf9.up.railway.app/posts/${id}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -79,7 +79,7 @@ function Post() {
       let newTitle = prompt("Enter New Title: ");
 
       axios.put(
-        `http://localhost:4200/posts/title`,
+        `https://full-stack-server-production-cdf9.up.railway.app/posts/title`,
         { newTitle: newTitle, id: id },
         {
           headers: { accessToken: localStorage.getItem("accessToken") },
@@ -91,7 +91,7 @@ function Post() {
     } else {
       let newPostText = prompt("Enter New Text: ");
       axios.put(
-        `http://localhost:4200/posts/postText`,
+        `https://full-stack-server-production-cdf9.up.railway.app/posts/postText`,
         { newText: newPostText, id: id },
         {
           headers: { accessToken: localStorage.getItem("accessToken") },

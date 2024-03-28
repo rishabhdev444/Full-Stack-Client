@@ -12,12 +12,12 @@ function ProfilePage() {
   const { authState } = useContext(AuthContext);
 
   useEffect(()=>{
-    axios.get(`http://localhost:4200/auth/info/${id}`).then((res)=>{
+    axios.get(`https://full-stack-server-production-cdf9.up.railway.app/auth/info/${id}`).then((res)=>{
       setUsername(res.data.username);
     })
 
 
-    axios.get(`http://localhost:4200/posts/byUserId/${id}`).then((res)=>{
+    axios.get(`https://full-stack-server-production-cdf9.up.railway.app/posts/byUserId/${id}`).then((res)=>{
       setListOfPosts(res.data);
     })
   },[])

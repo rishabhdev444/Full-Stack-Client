@@ -21,7 +21,7 @@ function App() {
   
   useEffect(() => {
     axios
-      .get("http://localhost:4200/auth/auth", {
+      .get("https://full-stack-server-production-cdf9.up.railway.app//auth/auth", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((res) => {

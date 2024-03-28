@@ -15,7 +15,7 @@ function Home() {
       navigate("/login");
     } else {
       axios
-        .get("http://localhost:4200/posts", {
+        .get("https://full-stack-server-production-cdf9.up.railway.app/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((resp) => {
@@ -32,7 +32,7 @@ function Home() {
   const likePost = (postId) => {
     axios
       .post(
-        "http://localhost:4200/likes",
+        "https://full-stack-server-production-cdf9.up.railway.app/likes",
         { PostId: postId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )

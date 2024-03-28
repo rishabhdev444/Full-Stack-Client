@@ -15,7 +15,7 @@ function Registration() {
       });
     
       const onSubmit = (data) => {
-        axios.post("http://localhost:4200/auth", data).then(() => {
+        axios.post("https://full-stack-server-production-cdf9.up.railway.app/auth", data).then(() => {
           console.log(data);
         });
       };

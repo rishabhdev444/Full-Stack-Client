@@ -22,7 +22,7 @@ function CreatePost() {
 
     const onSubmit=(data)=>{
 
-        axios.post("http://localhost:4200/posts",data,{
+        axios.post("https://full-stack-server-production-cdf9.up.railway.app/posts",data,{
           headers:{accessToken:localStorage.getItem("accessToken")}
         }).then((resp)=>{
         navigate('/')
