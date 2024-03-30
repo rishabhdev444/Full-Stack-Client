@@ -66,10 +66,10 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="row"> 
       {listOfPosts.map((value, key) => {
         return (
-          <div key={key} className="post">
+          <div key={key} className="post col">
             <div className="title">{value.title}</div>
             <div
               className="body"
