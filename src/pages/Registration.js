@@ -21,15 +21,17 @@ function Registration() {
       };
 
 
-  return (
-    <div>
+ return (
+    <div className="registration">
+      <h1 className="login">Sign Up</h1>
+      <p className="loginSubtext">... to see the whole world on your finger tips!</p>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
         <Form className="formContainer">
-          <label>Username: </label>
+          <label>Username </label>
           <ErrorMessage name="username" component="span" />
           <Field
             autoComplete="off"
@@ -38,7 +40,7 @@ function Registration() {
             placeholder="(Ex. John123...)"
           />
 
-          <label>Password: </label>
+          <label>Password </label>
           <ErrorMessage name="password" component="span" />
           <Field
             autoComplete="off"
