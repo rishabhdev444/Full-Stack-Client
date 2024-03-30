@@ -349,15 +349,15 @@ a {
 }
 
 .footer .footerBtn{
-  width: 110px;
-  margin-left: 300px;
+  width: 100px;
+  margin-left: 250px;
   color: rgb(214, 49, 49);
   background-color: #fff;
   font-size: 1rem;
   border-radius: 8px;
   border: none;
-  font-weight: 600;
-  padding: 8px;
+  font-weight: 500;
+  padding: 6px;
 }
 
 /* LOGIN */
