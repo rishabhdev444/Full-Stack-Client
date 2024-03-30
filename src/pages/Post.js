@@ -102,7 +102,7 @@ function Post() {
     }
   };
 
-  return (
+ return (
     <div className="postPage">
       <div className="leftSide">
         <div className="post" id="individual">
@@ -131,7 +131,7 @@ function Post() {
           <div className="footer">
             {postObject.username}
             {authState.username === postObject.username && (
-              <button onClick={() => deletePost(postObject.id)}>
+              <button className="footerBtn" onClick={() => deletePost(postObject.id)}>
                 Delete Post
               </button>
             )}
@@ -155,10 +155,10 @@ function Post() {
           {comments.map((comment, key) => {
             return (
               <div key={key} className="comment">
-                {comment.commentBody}
-                <label>Username: {comment.username}</label>
+                <p className="commentText">{comment.commentBody}</p>
+                <label>Username : {comment.username}</label>
                 {authState.username === comment.username && (
-                  <button onClick={() => deleteComment(comment.id)}>X</button>
+                  <button className="deleteBtn" onClick={() => deleteComment(comment.id)}>X</button>
                 )}
               </div>
             );
