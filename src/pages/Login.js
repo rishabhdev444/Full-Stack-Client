@@ -27,14 +27,17 @@ function Login() {
   };
   return (
     <div className="loginContainer">
-    <label>Username:</label>
+      <h1 className="login">Log In</h1>
+      <p className="loginSubtext">... to see the whole world on your finger tips!</p>
+      <div className="loginBox">
+    <label>Username</label>
     <input
       type="text"
       onChange={(event) => {
         setUsername(event.target.value);
       }}
     />
-    <label>Password:</label>
+    <label>Password</label>
     <input
       type="password"
       onChange={(event) => {
@@ -43,6 +46,7 @@ function Login() {
     />
 
     <button onClick={login}> Login </button>
+    </div>
   </div>
   )
 }
